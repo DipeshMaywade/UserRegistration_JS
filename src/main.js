@@ -37,7 +37,7 @@ class Registration {
     }
 
     phone = (phone) => {
-        let regex = new RegExp("^[0-9]{2}[: :][0-9]{10}")
+        let regex = new RegExp("^[0-9]{2}[: :][0-9]{10}$")
         if(phone.match(regex)){
             console.log("Correct Phone Number");
             return true;

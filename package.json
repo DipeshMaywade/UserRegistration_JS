@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "nodemon main.js",
-    "test": "mocha test"
+    "test": "mocha"
   },
   "author": "Dipesh",
   "license": "ISC",

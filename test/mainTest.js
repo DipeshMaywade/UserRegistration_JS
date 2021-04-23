@@ -51,3 +51,20 @@ describe("Valid Email", ()=> {
         assert.equal(result, false)
      });
 });
+
+describe("Valid Phone", ()=> {
+    it('should be true when phone number is correct', ()=> {
+       let result = mainObj.phone("91 3424323244")
+       assert.equal(result, true)
+    });
+
+    it('should be fail when phone number is more then 10 digits', ()=> {
+        var result = mainObj.phone("13 43232432448")
+        assert.equal(result, false)
+     });
+
+     it('should be fail when phone is less then 10 digits', ()=> {
+        var result = mainObj.phone("23 21312312")
+        assert.equal(result, false)
+     });
+});
