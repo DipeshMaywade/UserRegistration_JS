@@ -1,5 +1,3 @@
-
-
 class Registration {
 
     firstName = (name) => {
@@ -13,7 +11,6 @@ class Registration {
         if(lastName.match(regex)) return true
         else return false    
     }
-
 }
 
 module.exports = new Registration();
