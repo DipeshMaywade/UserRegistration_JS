@@ -35,6 +35,18 @@ class Registration {
             return false;
         }  
     }
+
+    phone = (phone) => {
+        let regex = new RegExp("^[0-9]{2}[: :][0-9]{10}")
+        if(phone.match(regex)){
+            console.log("Correct Phone Number");
+            return true;
+        } 
+        else {
+            console.log("InCorrect Phone Number");
+            return false;
+        }  
+    }
 }
 
 module.exports = new Registration();
