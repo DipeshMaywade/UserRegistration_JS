@@ -110,3 +110,45 @@ describe("Valid Password", ()=> {
          assert.equal(result, false)
       });
 });
+
+describe("Valid Email", ()=> {
+    it('should be true when eamil is correct', ()=> {
+       let result = mainObj.emailSample("abc-100@yahoo.com")
+       assert.equal(result, true)
+    });
+
+    it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.emailSample("abc.100@yahoo.com")
+        assert.equal(result, true)
+     });
+
+     it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.emailSample("abc111@abc.com")
+        assert.equal(result, true)
+     });
+
+     it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.emailSample("abc-100@abc.net")
+        assert.equal(result, true)
+     });
+
+     it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.emailSample("abc.100@abc.com.au")
+        assert.equal(result, true)
+     });
+
+     it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.emailSample("abc@1.com")
+        assert.equal(result, true)
+     });
+
+     it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.emailSample("abc@gmail.com.com")
+        assert.equal(result, true)
+     });
+
+     it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.emailSample("abc+100@gamil.com")
+        assert.equal(result, true)
+     });
+});

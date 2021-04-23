@@ -59,6 +59,19 @@ class Registration {
             return false;
         }  
     }
+
+    emailSample = (email) => {
+        let regex = new RegExp("^abc[a-zA-Z0-9.+-]*@[a-z0-9]*[.][a-z]{2,5}[.,a-z]*$")
+        if(email.match(regex)){
+            console.log("Correct Email");
+            return true;
+        } 
+        else {
+            console.log("InCorrect Email");
+            return false;
+        }  
+    }
+    
 }
 
 module.exports = new Registration();
