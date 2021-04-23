@@ -47,6 +47,18 @@ class Registration {
             return false;
         }  
     }
+
+    password = (password) => {
+        let regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{8,}$")
+        if(password.match(regex)){
+            console.log("Valid Password");
+            return true;
+        } 
+        else {
+            console.log("Invalid Password");
+            return false;
+        }  
+    }
 }
 
 module.exports = new Registration();
