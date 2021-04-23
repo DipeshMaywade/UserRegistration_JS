@@ -80,4 +80,14 @@ describe("Valid Password", ()=> {
         assert.equal(result, false)
      });
 
+     it('should be true when password has atleat one upper case', ()=> {
+        let result = mainObj.password("dsDd@3442")
+        assert.equal(result, true)
+     });
+ 
+     it('should be fail when password has no upper cases', ()=> {
+         let result = mainObj.password("d@3sdff2")
+         assert.equal(result, false)
+      });
+
 });
