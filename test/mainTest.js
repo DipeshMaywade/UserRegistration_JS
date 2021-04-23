@@ -34,3 +34,20 @@ describe("Valid Last Name", ()=> {
         assert.equal(result, false)
      });
 });
+
+describe("Valid Email", ()=> {
+    it('should be true when eamil is correct', ()=> {
+       let result = mainObj.email("abc.xyz@bl.co.in")
+       assert.equal(result, true)
+    });
+
+    it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.email("abc.xyz@bldfkjs.co.in")
+        assert.equal(result, false)
+     });
+
+     it('should be fail when email is incorrect', ()=> {
+        var result = mainObj.email("xyz@bldfkjs.co.in")
+        assert.equal(result, false)
+     });
+});
