@@ -99,4 +99,14 @@ describe("Valid Password", ()=> {
          let result = mainObj.password("d@DFdfffd")
          assert.equal(result, false)
       });
+
+      it('should be true when password has exactly 1 special char', ()=> {
+        let result = mainObj.password("dsDd@3442")
+        assert.equal(result, true)
+     });
+ 
+     it('should be fail when password has no special Char', ()=> {
+         let result = mainObj.password("dDFdfffd12")
+         assert.equal(result, false)
+      });
 });

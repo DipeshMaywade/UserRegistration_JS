@@ -49,7 +49,7 @@ class Registration {
     }
 
     password = (password) => {
-        let regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{8,}$")
+        let regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()]{1}).{8,}$")
         if(password.match(regex)){
             console.log("Valid Password");
             return true;
