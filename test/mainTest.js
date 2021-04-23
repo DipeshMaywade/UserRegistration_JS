@@ -90,4 +90,13 @@ describe("Valid Password", ()=> {
          assert.equal(result, false)
       });
 
+      it('should be true when password has atleat one numeric', ()=> {
+        let result = mainObj.password("dsDd@3442")
+        assert.equal(result, true)
+     });
+ 
+     it('should be fail when password has no numeric', ()=> {
+         let result = mainObj.password("d@DFdfffd")
+         assert.equal(result, false)
+      });
 });
