@@ -68,3 +68,16 @@ describe("Valid Phone", ()=> {
         assert.equal(result, false)
      });
 });
+
+describe("Valid Password", ()=> {
+    it('should be true when password has minimum 8 character', ()=> {
+       let result = mainObj.password("dsDd@3442")
+       assert.equal(result, true)
+    });
+
+    it('should be fail when password has less then 8 character', ()=> {
+        let result = mainObj.password("dD@32")
+        assert.equal(result, false)
+     });
+
+});
